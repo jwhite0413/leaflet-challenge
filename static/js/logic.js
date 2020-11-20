@@ -71,21 +71,21 @@ function createfeature(earthquakedata) {
 }
 
 function createMap(earthquakes) {
-    var satellite = L.tileLayer("http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v7/14/4823/6160.mvt?access_token={accessToken}", {
+    var satellite = L.tileLayer("http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
         id: "mapbox.satellite",
-        tilesize: 512,
+        // tilesize: 512,
         accessToken: "pk.eyJ1IjoiamVzc3doaXRlMDQxMyIsImEiOiJja2doNDc3czcxN3N3MnlwZHFicW43eW9zIn0.JakbJtL_u6-lbAEYwMPqmA"
     });
-    var grayscale = L.tileLayer("http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v7/14/4823/6160.mvt?access_token={accessToken}", {
+    var grayscale = L.tileLayer("http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
-        tilesize: 512,
-        id: "mapbox.grayscale",
+        // tilesize: 512,
+        id: "mapbox.light",
         accessToken: "pk.eyJ1IjoiamVzc3doaXRlMDQxMyIsImEiOiJja2htcGR1cXgwOGdpMnRub2R1d3NoZDF0In0.OLHV6huGFMdkDFcKHZNjog"
     });
-    var outdoor = L.tileLayer("http://a.tiles.mapbox.com/v4/mapbox.mapbox-streets-v7/14/4823/6160.mvt?access_token={accessToken}", {
+    var outdoor = L.tileLayer("http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
         tilesize: 512,
