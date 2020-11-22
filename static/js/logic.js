@@ -17,7 +17,7 @@ function createfeature(earthquakedata) {
     function onEachLayer(feature) {
         return new L.circleMarker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
             radius: circleSize(feature.properties.mag),
-            fillOpacity: .5,
+            fillOpacity: .75,
             color: getColor(feature.properties.mag),
             fillcolor: getColor(feature.properties.mag)
         });
@@ -77,10 +77,10 @@ function createMap(earthquakes) {
     //create variable for new map
     var myMap = L.map("map", {
         center: [
-            0.00, 0.00
+            35.5849, -90.7501
 
         ],
-        zoom: 2,
+        zoom: 3,
         layers: [satellite, earthquakes]
     });
     //add layers to map
@@ -107,22 +107,22 @@ function createMap(earthquakes) {
 
 //function for circle size of markers
 function circleSize(mag) {
-    return mag ** 2;
+    return mag ** 1;
 };
 
 //color coding for circles
 function getColor(mag) {
     if (mag >= 5) {
-        return "red";
+        return "firebrick";
     } else if (mag >= 4) {
-        return ("orange");
+        return ("orangered");
     } else if (mag >= 3) {
-        return ("yellow");
+        return ("orange");
     } else if (mag >= 2) {
-        return ("yellowgreen");
+        return ("yellow");
     } else if (mag >= 1) {
-        return ("green");
+        return ("yellowgreen");
     } else {
-        return "green";
+        return "springgreen";
     }
 };
