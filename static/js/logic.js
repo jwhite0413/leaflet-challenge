@@ -70,26 +70,29 @@ function createfeature(earthquakedata) {
     createMap(earthquakes);
 }
 
+
+
+
 function createMap(earthquakes) {
-    var satellite = L.tileLayer("http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    var satellite = L.tileLayer("http://api.tiles.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: "mapbox.satellite",
+        // maxZoom: 18,
+        // id: "mapbox.satellite",
         // tilesize: 512,
         accessToken: "pk.eyJ1IjoiamVzc3doaXRlMDQxMyIsImEiOiJja2doNDc3czcxN3N3MnlwZHFicW43eW9zIn0.JakbJtL_u6-lbAEYwMPqmA"
     });
-    var grayscale = L.tileLayer("http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    var grayscale = L.tileLayer("http://api.tiles.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        // tilesize: 512,
-        id: "mapbox.light",
+        // maxZoom: 18,
+        // // tilesize: 512,
+        // id: "mapbox.light",
         accessToken: "pk.eyJ1IjoiamVzc3doaXRlMDQxMyIsImEiOiJja2htcGR1cXgwOGdpMnRub2R1d3NoZDF0In0.OLHV6huGFMdkDFcKHZNjog"
     });
-    var outdoor = L.tileLayer("http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    var outdoor = L.tileLayer("http://api.tiles.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        tilesize: 512,
-        id: "mapbox.outdoor",
+        // maxZoom: 18,
+        // tilesize: 512,
+        // id: "mapbox.outdoor",
         accessToken: "pk.eyJ1IjoiamVzc3doaXRlMDQxMyIsImEiOiJja2htcGR1cXgwOGdpMnRub2R1d3NoZDF0In0.OLHV6huGFMdkDFcKHZNjog"
     });
     var baseMaps = {
