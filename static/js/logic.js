@@ -127,6 +127,7 @@ function createMap(earthquakes) {
             div.innerHTML += '<i style = "background:' + getColor(i) + '"></i>' + labels[i] + '<br>';
         }
         return div;
-        info.addTo(myMap);
     };
-}
+    info.addTo(myMap);
+
+};
